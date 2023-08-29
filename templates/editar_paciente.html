@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Editar Paciente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <h1>Editar Paciente</h1>
+
+    <form action="/editar_paciente/{{ paciente_id }}" method="POST">
+
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" value="{{ paciente[1] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="direccionAdmin">Dirección:</label>
+            <input type="text" id="direccionAdmin" name="direccionAdmin" required value="{{ paciente[2] }}">
+        </div>
+        <div class="form-group">
+            <label for="telefonoAdmin">Teléfono:</label>
+            <input type="text" id="telefonoAdmin" name="telefonoAdmin" required value="{{ paciente[3] }}">
+        </div>
+        <div class="form-group">
+            <label for="diagnostico">Diagnóstico:</label>
+            <input type="text" id="diagnostico" name="diagnostico" required value="{{ paciente[4] }}">
+        </div>
+        <div class="form-group">
+            <label for="tratamiento">Tratamiento:</label>
+            <input type="text" id="tratamiento" name="tratamiento" required value="{{ paciente[5] }}">
+        </div>
+        <div class="form-group">
+            <label for="evolucion">Evolución:</label>
+            <input type="text" id="evolucion" name="evolucion" value="{{ paciente[6] }}">
+        </div>
+        <div class="form-group">
+            <label for="citaAnterior">Cita Anterior:</label>
+            <input type="datetime-local" id="citaAnterior" name="citaAnterior" value="{{ paciente[7] }}">
+        </div>
+        <div class="form-group">
+            <label for="nuevaCita">Nueva Cita:</label>
+            <input type="datetime-local" id="nuevaCita" name="nuevaCita" value="{{ paciente[8] }}">
+        </div>
+        <button type="submit">Guardar Cambios</button>
+    </form>
+
+    <!-- Agregar el enlace para volver a la lista de pacientes -->
+    <a href="/ver_datos">Volver a la Lista de Pacientes</a>
+
+</body>
+</html>

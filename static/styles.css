@@ -1,0 +1,183 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #66afe9;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-volver {
+  background-color: #ccc;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.my-form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tabcontent {
+    font-family: sans-serif;
+    font-size: smaller;
+    max-width: 300px;
+    margin-top: 10px;
+    margin: 50px auto; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: linear-gradient(#d491d2, #6b4cf5);
+    box-shadow: 0 10px 10px rgba(7, 7, 7, 0.2);
+  }
+
+  utton {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno (alto, ancho) */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de tipo puntero al pasar por encima */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el cursor por encima */
+}
+
+  .button-center {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #adminTab form {
+    font-family: sans-serif;
+    font-size: smaller;
+    max-width: 300px;
+    margin-top: 0px;
+    margin: 0px auto; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+  }
+  
+  .form-group input {
+    width: 100%;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  .right-align-input {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px; /* Ajusta el valor según tus necesidades */
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tablinks {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .tablinks.active {
+    background-color: #ccc;
+  }
+  
+  .right-align {
+    text-align: right;
+  }
+  
+  .right-align-input {
+    direction: rtl;
+    text-align: right;
+  }

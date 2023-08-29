@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultorio - Ver Cuestionario</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Cuestionario - {{ paciente[1] }}</h2>
+                <form action="/cuestionario/{{ paciente[0] }}" method="POST">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" value="{{ paciente['nombre'] }}" readonly>
+                    <!-- Agregar los demás campos del paciente aquí (dirección, teléfono, etc.) -->
+                    <h3>Cuestionario:</h3>
+                    <label for="pregunta1">Pregunta 1:</label>
+                    <input type="text" id="pregunta1" name="pregunta1">
+                    <label for="pregunta2">Pregunta 2:</label>
+                    <input type="text" id="pregunta2" name="pregunta2">
+                    <!-- Agregar las demás preguntas del cuestionario aquí -->
+                    <br>
+                    <input type="submit" value="Guardar Cuestionario" class="btn btn-primary">
+                </form>
+                <br>
+                <a href="/cuestionario/{{ paciente[0] }}" class="btn btn-primary btn-sm">Ver Cuestionario</a>
+                <a href="/ver_datos" class="btn btn-secondary">Volver a la lista de pacientes</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

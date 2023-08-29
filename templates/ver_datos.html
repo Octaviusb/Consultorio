@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Lista de Pacientes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lista de Pacientes</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Pacientes</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        <th>Diagnóstico</th>
+                        <th>Tratamiento</th>
+                        <th>Evolución</th>
+                        <th>Cita Anterior</th>
+                        <th>Nueva Cita</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for paciente in registros %}
+                        <tr>
+                            <td>{{ paciente[0] }}</td>
+                            <td>{{ paciente[1] }}</td>
+                            <td>{{ paciente[2] }}</td>
+                            <td>{{ paciente[3] }}</td>
+                            <td>{{ paciente[4] }}</td>
+                            <td>{{ paciente[5] }}</td>
+                            <td>{{ paciente[6] }}</td>
+                            <td>{{ paciente[7] }}</td>
+                            <td>{{ paciente[8] }}</td>
+                            <td>
+                                <a href="/ver_cuestionario/{{ paciente[0] }}" class="btn btn-primary btn-sm">Ver Cuestionario</a>
+                                <a href="/editar_paciente/{{ paciente[0] }}" class="btn btn-secondary btn-sm">Editar</a>
+                                
+                             <!--   <a href="/eliminar_paciente/{{ paciente[0] }}" class="btn btn-secondary btn-sm">Eliminar</a> -->
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a href="/agregar_paciente" class="btn btn-success">Agregar Nuevo Paciente</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

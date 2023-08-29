@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Consultorio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <form action="/" method="POST" class="my-form">
+        <div class="form-group">
+            <label for="user">Usuario:</label>
+            <input type="text" id="user" name="user" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'adminTab')">Acceder</button>
+        </div>
+
+        <div id="adminTab" class="tabcontent">
+            <h1>Administración</h1>
+            <div class="form-group">
+                <label for="nombreAdmin">Nombre y Apellidos:</label>
+                <input type="text" id="nombreAdmin" name="nombreAdmin" required>
+            </div>
+            <div class="form-group">
+                <label for="direccionAdmin">Dirección:</label>
+                <input type="text" id="direccionAdmin" name="direccionAdmin" required>
+            </div>
+            <div class="form-group">
+                <label for="telefonoAdmin">Teléfono:</label>
+                <input type="text" id="telefonoAdmin" name="telefonoAdmin" required>
+            </div>
+            <div class="form-group">
+                <label for="diagnostico">Diagnóstico:</label>
+                <input type="text" id="diagnostico" name="diagnostico" required>
+            </div>
+            <div class="form-group">
+                <label for="tratamiento">Tratamiento:</label>
+                <input type="text" id="tratamiento" name="tratamiento" required>
+            </div>
+            <div class="form-group">
+                <label for="evolucion">Evolución:</label>
+                <input type="text" id="evolucion" name="evolucion">
+            </div>
+
+            <div class="form-group">
+                <label for="citaAnterior">Cita Anterior:</label>
+                <input type="datetime-local" id="citaAnterior" name="citaAnterior">
+            </div>
+            <div class="form-group">
+                <label for="nuevaCita">Nueva Cita:</label>
+                <input type="datetime-local" id="nuevaCita" name="nuevaCita">
+            </div>
+            <button type="submit">Añadir</button>
+            <button type="button" onclick="borrarUsuario()">Borrar</button>
+        </div>
+    </form>
+
+    <!-- Agregar un botón para ir directo a ver_datos.html -->
+    <form action="/ver_datos" method="GET">
+        <button type="submit">Ver Datos</button>
+    </form>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

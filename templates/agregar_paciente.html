@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Agregar Paciente</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+
+    <h1>Agregar Nuevo Paciente</h1>
+
+    <form action="/agregar_paciente" method="POST">
+        <label for="nombreAdmin">Nombre:</label>
+        <input type="text" id="nombreAdmin" name="nombreAdmin" required>
+
+        <!-- Agrega más campos del formulario aquí -->
+
+        <button type="submit">Agregar Paciente</button>
+    </form>
+
+    <a href="/ver_datos" class="btn btn-secondary">Volver a la Lista de Pacientes</a>
+
+</body>
+</html>
+
